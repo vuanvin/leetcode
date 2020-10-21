@@ -1,0 +1,10 @@
+*.xml
+*.iml
+*CMakeLists.txt
+*.class
+*.exe
+*.o
+
+*/out/
+*.idea/
+*debug/

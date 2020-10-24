@@ -26,8 +26,10 @@ git commit -m "commit massage"
 
 远程提交：
 
-```
+```shell
 git push leetcode
+## 或者直接
+git push
 ```
 
 

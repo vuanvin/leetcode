@@ -1,2 +1,2 @@
 # leetcode
-This is my leetcode practice repo.
+This is my leetcode exercuse repo.

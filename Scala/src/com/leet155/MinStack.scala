@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leet155
 
 class MinStack() {
 

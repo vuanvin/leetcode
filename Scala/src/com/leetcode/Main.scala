@@ -10,7 +10,7 @@ object Main {
     print("Enter here: ")
 
     val str = StdIn.readLine()
-    val result = Solution.letterCombinations(str)
+    val result = 0
 
     println(result)
 

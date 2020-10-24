@@ -1,4 +1,4 @@
-package leetcode.leet118
+package com.leet118
 
 object Solution {
   def generate(numRows: Int): List[List[Int]] = {

@@ -1,7 +1,7 @@
-package leetcode
+package com.leetcode
 
 import scala.io.StdIn
-import leetcode.leet118
+import com.leet118
 
 object Main {
   def main(args: Array[String]): Unit = {

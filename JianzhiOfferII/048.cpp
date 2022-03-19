@@ -71,7 +71,6 @@ TreeNode* deserialize(string data) {
         Q.pop();
 
         auto word = f();
-        cout << word << endl;
         if (word == null) {
             p->left = nullptr;
         } else {
@@ -79,8 +78,7 @@ TreeNode* deserialize(string data) {
             Q.push(p->left);
         }
 
-        auto word = f();
-        cout << word << endl;
+        word = f();
         if (word == null) {
             p->right = nullptr;
         } else {

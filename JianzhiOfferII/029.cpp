@@ -19,36 +19,25 @@ public:
     }
 };
 
-Node* insert(Node* head, int insertVal) {
-    auto newNode = new Node(insertVal);
-    if (!head) {
-        newNode->next = newNode;
-        return newNode;
-    }
-
-    bool isAscend = true; 
-    auto currNode = head->next;
-    int add = 0;
-    while (currNode != head) {
-        auto nextNode = currNode->next;
-        if (currNode->val < nextNode->val) {
-            add++;
-        } else if (currNode->val > nextNode->val) {
-            add--;
+class Solution {
+public:
+    Node* insert(Node* head, int insertVal) {
+        if (!head) {
+            auto newNode = new Node(insertVal);
+            newNode->next = newNode;
+            return newNode;
         }
-        currNode = nextNode;
-    }
-
-    if (add == 0) {
-        while (currNode->next == head || currNode->next->val != currNode->val)
-    }
-
-    if (add > 1) {
-
-        while () {
-
+        auto curr = head;
+        while (curr->next != head) {
+            if ((curr->val <= insertVal) ^ (insertVal <= curr->next->val) ^
+                    (curr->val <= curr->next->val)) {
+                break;
+            }
+            curr = curr->next;
         }
-    } else {
+        curr->next = new Node(insertVal, curr->next);
 
+        return head;
     }
-}
+
+};

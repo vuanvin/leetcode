@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <leetcode.h>
 
 const int MAXN = 1000 * 1000 * 1000;
 
@@ -55,7 +54,3 @@ public:
  * MyCalendar* obj = new MyCalendar();
  * bool param_1 = obj->book(start,end);
  */
-
- int main() {
-    MyCalendar cal;
- }

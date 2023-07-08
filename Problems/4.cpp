@@ -1,28 +1,16 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <leetcode.h>
 
-namespace solution_2 {
-
-class Solution {
-public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {}
-};
-
-} // namespace solution_2
-
-
-namespace solution_1 {
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int m = nums1.size(), n = nums2.size();
 
         if (m == 0) {
-            return n % 2 == 1 ? nums2[n/2] : (nums2[n/2-1] + nums2[n/2]) * 1.0 / 2 ;
+            return n % 2 == 1 ? nums2[n / 2] : (nums2[n / 2 - 1] + nums2[n / 2]) * 1.0 / 2;
         }
 
         if (n == 0) {
-            return m % 2 == 1 ? nums1[m/2] : (nums1[m/2-1] + nums1[m/2]) * 1.0 / 2 ;
+            return m % 2 == 1 ? nums1[m / 2] : (nums1[m / 2 - 1] + nums1[m / 2]) * 1.0 / 2;
         }
 
         if ((m + n) % 2 == 1) {
@@ -39,13 +27,13 @@ public:
 
             while (id1 + id2 < mid) {
                 if (id1 + 1 == m) {
-                    id2 ++;
+                    id2++;
                     who = 1;
                 } else if (id2 + 1 == n) {
-                    id1 ++;
+                    id1++;
                     who = 0;
                 } else if (nums1[id1 + 1] < nums2[id2 + 1]) {
-                    id1 ++;
+                    id1++;
                     who = 0;
                 } else {
                     id2++;
@@ -69,13 +57,13 @@ public:
 
             while (id1 + id2 < mid) {
                 if (id1 + 1 == m) {
-                    id2 ++;
+                    id2++;
                     who = 1;
                 } else if (id2 + 1 == n) {
-                    id1 ++;
+                    id1++;
                     who = 0;
                 } else if (nums1[id1 + 1] < nums2[id2 + 1]) {
-                    id1 ++;
+                    id1++;
                     who = 0;
                 } else {
                     id2++;
@@ -85,13 +73,13 @@ public:
 
             double res = (who == 0) ? nums1[id1] : nums2[id2];
             if (id1 + 1 == m) {
-                id2 ++;
+                id2++;
                 who = 1;
             } else if (id2 + 1 == n) {
-                id1 ++;
+                id1++;
                 who = 0;
             } else if (nums1[id1 + 1] < nums2[id2 + 1]) {
-                id1 ++;
+                id1++;
                 who = 0;
             } else {
                 id2++;
@@ -103,4 +91,3 @@ public:
         }
     }
 };
-} // namespace solution_1

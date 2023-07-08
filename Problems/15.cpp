@@ -18,7 +18,7 @@ public:
                     continue;
                 }
                 while (second < third && nums[second] + nums[third] > target) {
-                    -- third;
+                    --third;
                 }
                 if (second == third) {
                     break;

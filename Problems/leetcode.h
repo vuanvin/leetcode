@@ -1,5 +1,16 @@
+#ifndef _LEETCODE_H
+#define _LEETCODE_H
+
 #include <bits/stdc++.h>
 using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 
 struct TreeNode {
     int val;
@@ -10,15 +21,4 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
-public:
-    string tree2str(TreeNode* root) {
-        if (!root) return string();
-
-        auto res = to_string(root->val);
-        if (root->left || root->right) res += "(" + tree2str(root->left) + ")";
-        if (root->right) res +=  "(" + tree2str(root->right) + ")";
-
-        return res;
-    }
-};
+#endif

@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <leetcode.h>
 
 class Solution {
 public:
@@ -33,17 +32,15 @@ public:
             }
         }
 
-        for (int mask = 0; mask <= term; ++mask ) {
-            if (dp[mask] == INT_MAX) { continue; } // no reach
-
+        for (int mask = 0; mask <= term; ++mask) {
+            if (dp[mask] == INT_MAX) continue;
             unordered_map<int, int> prop;
             for (int i = 0; i < n; ++i) {
                 if ((mask & (1 << i)) == 0) {
                     prop[nums[i]] = i;
                 }
             }
-            
-            if (prop.size() < gsize) { continue; } // dupricate
+            if (prop.size() < gsize) continue;
             int supp = 0;
             for (auto p : prop) {
                 supp |= (1 << p.second);
@@ -51,7 +48,7 @@ public:
 
             auto next = supp;
             while (next > 0) {
-                if (values.count(next) > 0) { // satisfy the condition
+                if (values.count(next) > 0) {  // satisfy the condition
                     dp[mask | next] = min(dp[mask | next], dp[mask] + values[next]);
                 }
                 next = (next - 1) & supp;

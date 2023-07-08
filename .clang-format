@@ -1,0 +1,21 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+AccessModifierOffset: -4
+AlignAfterOpenBracket: Align
+AlignTrailingComments: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+BinPackArguments: false
+BreakBeforeTernaryOperators: false
+ColumnLimit: 150
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+SortIncludes: true
+Standard: Latest
+TabWidth: 4
+...

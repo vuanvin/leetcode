@@ -18,8 +18,7 @@ public:
 
             if (ord.count(rch)) {
                 ord[rch]--;
-                if (ord[rch] == 0) { n_ok--; }
-
+                if (ord[rch] == 0) n_ok--;
                 if (n_ok == 0) {
                     while (l <= r) {
                         const auto& lch = s[l++];
@@ -27,7 +26,10 @@ public:
                             ord[lch]++;
                             if (ord[lch] == 1) {
                                 n_ok++;
-                                if (ansr - ansl > r - l + 1) { ansl = l - 1; ansr = r; }
+                                if (ansr - ansl > r - l + 1) {
+                                    ansl = l - 1;
+                                    ansr = r;
+                                }
                                 break;
                             }
                         }

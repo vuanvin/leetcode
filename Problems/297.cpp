@@ -3,14 +3,13 @@ using namespace std;
 
 struct TreeNode {
     int val;
-    TreeNode *left;
-    TreeNode *right;
+    TreeNode* left;
+    TreeNode* right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 class Codec {
 public:
-
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
         if (!root) {
@@ -21,14 +20,14 @@ public:
         return left + to_string(root->val) + right;
     }
 
-    inline TreeNode* parseSubtree(const string & data, int & ptr) {
+    inline TreeNode* parseSubtree(const string& data, int& ptr) {
         ++ptr;
         auto subtree = parse(data, ptr);
         ++ptr;
         return subtree;
     }
 
-    inline int parseInt(const string & data, int & ptr) {
+    inline int parseInt(const string& data, int& ptr) {
         int x = 0, sgn = 1;
         if (!isdigit(data[ptr])) {
             sgn = -1;
@@ -40,7 +39,7 @@ public:
         return x * sgn;
     }
 
-    TreeNode* parse(const string & data, int & ptr) {
+    TreeNode* parse(const string& data, int& ptr) {
         if (data[ptr] == 'X') {
             ++ptr;
             return nullptr;

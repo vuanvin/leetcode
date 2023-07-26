@@ -2,12 +2,12 @@ package leetcode
 
 import "strconv"
 
-var ans []string
+var ans257 []string
 
 func binaryTreePaths(root *TreeNode) []string {
-	ans = []string{}
+	ans257 = []string{}
 	constructPaths(root, "")
-	return ans
+	return ans257
 }
 
 func constructPaths(root *TreeNode, path string) {
@@ -15,7 +15,7 @@ func constructPaths(root *TreeNode, path string) {
 		pathSB := path
 		pathSB += strconv.Itoa(root.Val)
 		if root.Left == nil && root.Right == nil {
-			ans = append(ans, pathSB)
+			ans257 = append(ans257, pathSB)
 		} else {
 			pathSB += "->"
 			constructPaths(root.Left, pathSB)

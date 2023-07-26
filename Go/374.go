@@ -9,7 +9,9 @@ package leetcode
  * func guess(num int) int;
  */
 
-func guess(num int) int
+func guess(num int) int {
+	return num
+}
 
 func guessNumber(n int) int {
 	l, r := 0, n

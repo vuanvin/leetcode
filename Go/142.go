@@ -15,7 +15,6 @@ func detectCycle(head *ListNode) *ListNode {
 	if f == nil || f.Next == nil {
 		return nil
 	}
-
 	f = head
 	for s != f {
 		f = f.Next

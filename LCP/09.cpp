@@ -1,9 +1,6 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <leetcode.h>
 
 class Solution {
 public:
-    int minJump(vector<int>& jump) {
-
-    }
+    int minJump(vector<int>& jump) { return 0; }
 };

@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <leetcode.h>
 
 class Solution {
 public:
@@ -25,10 +24,11 @@ public:
 
         for (auto& ob : obstacles) {
             int u = ob[0], v = ob[1];
-            if (u > x || v > y)  continue;
+            if (u > x || v > y) continue;
 
             int t = min(u / xlen, v / ylen);
-            u -= t * xlen; v -= t * ylen;
+            u -= t * xlen;
+            v -= t * ylen;
 
             if (u > xlen || v > ylen) continue;
             if (command_vec[u] <= v && v <= command_vec[u + 1]) return false;

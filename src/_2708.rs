@@ -1,6 +1,7 @@
 use crate::leetcode::Solution;
 
 impl Solution {
+    #[allow(unused_mut)]
     pub fn max_strength(mut nums: Vec<i32>) -> i64 {
         if nums.len() == 1{
             return nums[0] as i64;
